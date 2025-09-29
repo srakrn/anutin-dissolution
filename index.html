@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>นับถอยหลังยุบสภา รัฐบาลอนุทิน ชาญวีระกุล</title>
+    
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="นับถอยหลังยุบสภา รัฐบาลอนุทิน ชาญวีระกุล">
+    <meta property="og:description" content="นับถอยหลังยุบสภา รัฐบาลอนุทิน ชาญวีระกุล - 31 มกราคม 2569">
+    <meta property="og:image" content="img/og-share.jpg">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="นับถอยหลังยุบสภา รัฐบาลอนุทิน ชาญวีระกุล">
+    <meta name="twitter:description" content="นับถอยหลังยุบสภา รัฐบาลอนุทิน ชาญวีระกุล - 31 มกราคม 2569">
+    <meta name="twitter:image" content="img/og-share.jpg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: Sarabun, sans-serif;
+            background: #333;
+            background: linear-gradient(135deg, #ff6412 0%, #333 50%, #312682 100%);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .countdown-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .title {
+            font-size: 3rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .countdown {
+            display: flex;
+            gap: 20px;
+        }
+
+        .time-segment {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .flip-card {
+            position: relative;
+            width: 140px;
+            height: 120px;
+            perspective: 600px;
+            margin-bottom: 20px;
+        }
+
+        .flip-card-inner {
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 4rem;
+            font-weight: bold;
+            color: #222;
+            text-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .flip-card-inner::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background-color: rgba(0, 0, 0, 0.5);
+            top: 50%;
+            z-index: 1;
+        }
+
+        .flip-card-inner::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            height: 50%;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), transparent);
+            top: 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+        }
+
+        .label {
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #ddd;
+        }
+
+        @media (max-width: 768px) {
+            .title {
+                font-size: 2rem;
+                margin-bottom: 1.5rem;
+            }
+
+            .countdown {
+                flex-direction: column;
+                gap: 5px;
+            }
+
+            .time-segment {
+                margin-bottom: 0px;
+            }
+
+            .flip-card {
+                width: 120px;
+                height: 100px;
+                margin-bottom: 0px;
+                padding-bottom: 2px;
+            }
+
+            .flip-card-inner {
+                font-size: 3.5rem;
+            }
+
+            .hide-on-phone {
+                display: none
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="countdown-container">
+        <h1 class="title">นับถอยหลังยุบสภา<br/>รัฐบาลอนุทิน ชาญวีระกุล<br/>31 มกราคม 2569</h1>
+        <div class="countdown">
+            <div class="time-segment">
+                <div class="flip-card">
+                    <div class="flip-card-inner" id="days">000</div>
+                </div>
+                <div class="label">วัน</div>
+            </div>
+            <div class="time-segment">
+                <div class="flip-card">
+                    <div class="flip-card-inner" id="hours">00</div>
+                </div>
+                <div class="label">ชั่วโมง</div>
+            </div>
+            <div class="time-segment">
+                <div class="flip-card">
+                    <div class="flip-card-inner" id="minutes">00</div>
+                </div>
+                <div class="label">นาที</div>
+            </div>
+            <div class="time-segment hide-on-phone">
+                <div class="flip-card">
+                    <div class="flip-card-inner" id="seconds">00</div>
+                </div>
+                <div class="label">วินาที</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const targetDate = new Date('2026-01-31T23:59:59.999+07:00');
+
+        function updateCountdown() {
+            const now = new Date();
+            
+            const diff = targetDate - now;
+            
+            if (diff <= 0) {
+                document.getElementById('days').textContent = '000';
+                document.getElementById('hours').textContent = '00';
+                document.getElementById('minutes').textContent = '00';
+                document.getElementById('seconds').textContent = '00';
+                return;
+            }
+            
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+            
+            // Update the countdown display
+            document.getElementById('days').textContent = days.toString().padStart(3, '0');
+            document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+            document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+            document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+        }
+
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+    </script>
+</body>
+</html>
