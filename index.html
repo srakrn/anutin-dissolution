@@ -89,7 +89,7 @@
             left: 0;
             right: 0;
             height: 1px;
-            background-color: rgba(0, 0, 0, 0.5);
+            background-color: rgba(0, 0, 0, 0.3);
             top: 50%;
             z-index: 1;
         }
@@ -110,6 +110,10 @@
             text-transform: uppercase;
             letter-spacing: 2px;
             color: #ddd;
+        }
+
+        .lower {
+            font-size: 1.5rem;
         }
 
         @media (max-width: 768px) {
@@ -133,14 +137,18 @@
             }
 
             .hide-on-phone {
-                display: none
+                display: none;
+            }
+            
+            .lower {
+                font-size: 1.5rem;
             }
         }
     </style>
 </head>
 <body>
     <div class="countdown-container">
-        <h1 class="title">นับถอยหลังยุบสภา<br/>รัฐบาลอนุทิน ชาญวีรกูล<br/>31 มกราคม 2569</h1>
+        <h1 class="title">นับถอยหลัง<span style="font-weight: bold">ยุบสภา</span><br/>รัฐบาลอนุทิน ชาญวีรกูล</h1>
         <div class="countdown">
             <div class="time-segment">
                 <div class="flip-card">
@@ -148,13 +156,13 @@
                 </div>
                 <div class="label">วัน</div>
             </div>
-            <div class="time-segment">
+            <div class="time-segment hide-on-phone">
                 <div class="flip-card">
                     <div class="flip-card-inner" id="hours">00</div>
                 </div>
                 <div class="label">ชั่วโมง</div>
             </div>
-            <div class="time-segment">
+            <div class="time-segment hide-on-phone">
                 <div class="flip-card">
                     <div class="flip-card-inner" id="minutes">00</div>
                 </div>
@@ -167,6 +175,9 @@
                 <div class="label">วินาที</div>
             </div>
         </div>
+        <p class="lower">
+        จนกว่าจะถึง 31 มกราคม 2569
+        </p>
     </div>
 
     <script>
