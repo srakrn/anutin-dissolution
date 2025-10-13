@@ -5,8 +5,8 @@ on:
     inputs:
       rollback:
         description: "Set to true to rollback the dissolution date to null"
-        required: false
-        default: "false"
+        type: boolean
+        default: false
 
 jobs:
   dissolution:
