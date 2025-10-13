@@ -1,0 +1,26 @@
+name: It's Time
+
+on:
+  workflow_dispatch:
+    inputs:
+      rollback:
+        description: "Set to true to rollback the dissolution date to null"
+        required: false
+        default: "false"
+
+jobs:
+  dissolution:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Set up repository
+        uses: actions/checkout@v5
+      - name: Set up git user
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+      - name: Update dissolution date
+        run: ./scripts/kill-switch.sh
+        env:
+          ROLLBACK: "${{ inputs.rollback }}"
