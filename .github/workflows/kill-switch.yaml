@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       rollback:
-        description: "Set to true to rollback the dissolution date to null"
+        description: "Trigger to rollback (remove dissolution date)"
         type: boolean
         default: false
 
