@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>นับถอยหลังยุบสภา รัฐบาลอนุทิน ชาญวีรกูล</title>
-    
+
     <meta property="og:type" content="website">
     <meta property="og:title" content="นับถอยหลังยุบสภา รัฐบาลอนุทิน ชาญวีรกูล">
     <meta property="og:description" content="นับถอยหลังยุบสภา รัฐบาลอนุทิน ชาญวีรกูล 31 มกราคม 2569">
     <meta property="og:image" content="img/og-share.jpg">
-    
+
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="นับถอยหลังยุบสภา รัฐบาลอนุทิน ชาญวีรกูล">
     <meta name="twitter:description" content="นับถอยหลังยุบสภา รัฐบาลอนุทิน ชาญวีรกูล 31 มกราคม 2569">
@@ -17,161 +18,16 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai+Looped:wght@100..900&display=swap" rel="stylesheet">
-
-    <style>
-        body {
-            font-family: "Noto Sans Thai Looped", sans-serif;
-            font-optical-sizing: auto;
-            font-style: normal;
-            font-variation-settings: "wdth" 100;
-            line-height: 1.2;
-            background: linear-gradient(135deg, #ff6412 0%, #333 50%, #312682 100%);
-            color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            overflow: hidden;
-        }
-
-        .countdown-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .title {
-            font-size: 3rem;
-            margin-bottom: 2rem;
-            text-align: center;
-            font-weight: normal;
-        }
-
-        .countdown {
-            display: flex;
-            gap: 20px;
-        }
-
-        .time-segment {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .flip-card {
-            position: relative;
-            width: 160px;
-            height: 100px;
-            perspective: 600px;
-            margin-bottom: 20px;
-        }
-
-        .flip-card-inner {
-            width: 100%;
-            height: 100%;
-            text-align: center;
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 5rem;
-            padding-bottom: 0.8rem;
-            color: #222;
-            text-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .flip-card-inner::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            right: 0;
-            height: 1px;
-            background-color: rgba(0, 0, 0, 0.3);
-            top: 50%;
-            z-index: 1;
-        }
-
-        .flip-card-inner::after {
-            content: '';
-            position: absolute;
-            left: 0;
-            right: 0;
-            height: 50%;
-            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), transparent);
-            top: 0;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-        }
-
-        .label {
-            font-size: 1rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: #ddd;
-        }
-
-        .lower {
-            font-size: 1.5rem;
-        }
-
-        #diagonal-banner {
-            position: fixed;
-            width: 250%;
-            background-color: rgba(0, 128, 0, 1);
-            color: white;
-            text-align: center;
-            font-size: 4rem;
-            font-weight: bold;
-            padding: 1.5rem 0;
-            transform: rotate(-45deg);
-            transform-origin: center;
-            top: 38%;
-            left: -75%;
-            z-index: 100;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-            letter-spacing: 2px;
-            display: none;
-        }
-
-        @media (max-width: 768px) {
-            .title {
-                font-size: 2rem;
-                margin-bottom: 1.5rem;
-            }
-
-            .countdown {
-                flex-direction: column;
-                gap: 5px;
-            }
-
-            .time-segment {
-                margin-bottom: 0px;
-            }
-
-            .flip-card {
-                margin-bottom: 1rem;
-                padding-bottom: 2px;
-            }
-
-            .hide-on-phone {
-                display: none;
-            }
-            
-            .lower {
-                font-size: 1.5rem;
-            }
-        }
-    </style>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai+Looped:wght@100..900&display=swap">
+    <link rel="modulepreload" href="/index.js" as="script" />
+    <link rel="stylesheet" href="/index.css">
 </head>
+
 <body>
-    <div id="diagonal-banner">รัฐบาลอนุทิน<br/>ยุบสภาแล้ว!</div>
+    <div id="diagonal-banner">รัฐบาลอนุทิน<br />ยุบสภาแล้ว!</div>
     <div class="countdown-container">
-        <h1 class="title">นับถอยหลัง<span style="font-weight: bold">ยุบสภา</span><br/>รัฐบาลอนุทิน ชาญวีรกูล</h1>
+        <h1 class="title">นับถอยหลัง<span style="font-weight: bold">ยุบสภา</span><br />รัฐบาลอนุทิน ชาญวีรกูล</h1>
         <div class="countdown">
             <div class="time-segment">
                 <div class="flip-card">
@@ -199,50 +55,11 @@
             </div>
         </div>
         <p class="lower">
-        สิ้นสุดการนับถอยหลัง 31 มกราคม 2569<span class="hide-on-phone"> เวลา 23:59:59</span>
+            สิ้นสุดการนับถอยหลัง 31 มกราคม 2569<span class="hide-on-phone"> เวลา 23:59:59</span>
         </p>
     </div>
 
-    <script>
-        const targetDate = new Date('2026-01-31T23:59:59.999+07:00');
-        const dissolDate = null;
-
-        function updateCountdown() {
-            if (dissolDate) {
-                var now = dissolDate; 
-            }
-            else {
-                var now = new Date();
-            }
-            
-            const diff = targetDate - now;
-            
-            if (diff <= 0) {
-                document.getElementById('days').textContent = '000';
-                document.getElementById('hours').textContent = '00';
-                document.getElementById('minutes').textContent = '00';
-                document.getElementById('seconds').textContent = '00';
-                return;
-            }
-            
-            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-            
-            document.getElementById('days').textContent = days.toString().padStart(3, '0');
-            document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
-            document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
-            document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
-        }
-
-        updateCountdown();
-        setInterval(updateCountdown, 1000);
-
-        if (dissolDate) {
-            const dab = document.getElementById('diagonal-banner');
-            dab.style.display = 'block';
-        }
-    </script>
+    <script type="module" src="/index.js"></script>
 </body>
+
 </html>
